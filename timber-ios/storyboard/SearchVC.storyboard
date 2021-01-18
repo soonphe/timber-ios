@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vZ5-gE-AUY">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="P20-Z5-BxU">
+            <objects>
+                <navigationController id="vZ5-gE-AUY" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qoQ-CW-y2Q">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BAT-rL-CDF" kind="relationship" relationship="rootViewController" id="XeV-iq-7Np"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hFB-RF-eJn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="299" y="-13"/>
+        </scene>
+        <!--SearchVC-->
+        <scene sceneID="h25-gc-33H">
+            <objects>
+                <viewController storyboardIdentifier="SearchVC" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BAT-rL-CDF" userLabel="SearchVC" customClass="SearchVC" customModule="timber_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="swu-oX-3JQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="0V4-cQ-sBJ">
+                                <rect key="frame" x="0.0" y="88" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JK8-FV-SoU">
+                                <rect key="frame" x="0.0" y="144" width="414" height="718"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="YVV-dI-siD"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0V4-cQ-sBJ" firstAttribute="top" secondItem="YVV-dI-siD" secondAttribute="top" id="EZ3-5H-9Nl"/>
+                            <constraint firstItem="JK8-FV-SoU" firstAttribute="top" secondItem="0V4-cQ-sBJ" secondAttribute="bottom" id="FYL-ba-vQJ"/>
+                            <constraint firstItem="JK8-FV-SoU" firstAttribute="leading" secondItem="YVV-dI-siD" secondAttribute="leading" id="GJs-fz-Lrz"/>
+                            <constraint firstItem="0V4-cQ-sBJ" firstAttribute="trailing" secondItem="JK8-FV-SoU" secondAttribute="trailing" id="RNb-y6-jaV"/>
+                            <constraint firstItem="JK8-FV-SoU" firstAttribute="trailing" secondItem="YVV-dI-siD" secondAttribute="trailing" id="UEp-3H-vbp"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="JK8-FV-SoU" secondAttribute="bottom" id="p4b-qq-MCx"/>
+                            <constraint firstItem="0V4-cQ-sBJ" firstAttribute="leading" secondItem="YVV-dI-siD" secondAttribute="leading" id="qn4-Gj-FpW"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="GVD-W7-yd8"/>
+                    <connections>
+                        <outlet property="movieTableView" destination="JK8-FV-SoU" id="534-NH-Rno"/>
+                        <outlet property="searchBar" destination="0V4-cQ-sBJ" id="wXA-AA-NH1"/>
+                        <segue destination="Ru2-Wb-5cE" kind="presentation" id="UqN-Ta-zAt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JdD-lf-3iS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1086.9565217391305" y="-13.392857142857142"/>
+        </scene>
+        <!--MovieDetailVC-->
+        <scene sceneID="Uzk-Lg-fb7">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MovieDetailVC" id="Ru2-Wb-5cE" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BeM-ot-y4v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1662" y="-13"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

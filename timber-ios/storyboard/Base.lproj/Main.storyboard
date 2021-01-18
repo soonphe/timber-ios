@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hwo-uK-PJl">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="cWL-1E-V05">
+            <objects>
+                <navigationController id="hwo-uK-PJl" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nfg-t4-j5h">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="YxL-en-0bl" kind="relationship" relationship="rootViewController" id="HNM-tt-4BN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Je0-zd-cB0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-449" y="55"/>
+        </scene>
+        <!--MainVC-->
+        <scene sceneID="RCp-ek-c76">
+            <objects>
+                <viewController id="YxL-en-0bl" customClass="MainVC" customModule="timber_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JJr-HC-tUj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pinsoft" translatesAutoresizingMaskIntoConstraints="NO" id="jeR-lg-Ywc">
+                                <rect key="frame" x="87" y="229" width="240" height="84"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="84" id="UcH-PR-8RZ"/>
+                                </constraints>
+                            </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="R1e-NL-WRF">
+                                <rect key="frame" x="197" y="438" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4A8-KT-mmf">
+                                <rect key="frame" x="146" y="520" width="122" height="30"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                                <state key="normal" title="点击进入">
+                                    <color key="titleColor" systemColor="systemGray6Color"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="btnClickTap:" destination="YxL-en-0bl" eventType="touchUpInside" id="jrv-gL-cXd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="YHm-zq-kiW"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="R1e-NL-WRF" firstAttribute="centerY" secondItem="JJr-HC-tUj" secondAttribute="centerY" id="7eH-HY-2z0"/>
+                            <constraint firstItem="R1e-NL-WRF" firstAttribute="centerX" secondItem="YHm-zq-kiW" secondAttribute="centerX" id="EUf-tD-4Db"/>
+                            <constraint firstItem="jeR-lg-Ywc" firstAttribute="centerX" secondItem="YHm-zq-kiW" secondAttribute="centerX" id="FRR-YU-tHn"/>
+                            <constraint firstItem="jeR-lg-Ywc" firstAttribute="leading" secondItem="YHm-zq-kiW" secondAttribute="leading" constant="87" id="PZt-sq-dl5"/>
+                            <constraint firstItem="jeR-lg-Ywc" firstAttribute="top" secondItem="YHm-zq-kiW" secondAttribute="top" constant="141" id="bZz-1C-3ST"/>
+                            <constraint firstItem="4A8-KT-mmf" firstAttribute="width" secondItem="JJr-HC-tUj" secondAttribute="width" multiplier="0.149758" constant="60" id="gI2-ef-rJc"/>
+                            <constraint firstItem="4A8-KT-mmf" firstAttribute="centerX" secondItem="YHm-zq-kiW" secondAttribute="centerX" id="nSG-ts-sPp"/>
+                            <constraint firstItem="4A8-KT-mmf" firstAttribute="top" secondItem="R1e-NL-WRF" secondAttribute="bottom" constant="62" id="q0P-0z-nne"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="xu1-rK-7fr"/>
+                    <connections>
+                        <outlet property="clickBtn" destination="4A8-KT-mmf" id="QRU-FS-XT1"/>
+                        <outlet property="logoImg" destination="jeR-lg-Ywc" id="FWU-16-0Lt"/>
+                        <outlet property="spinner" destination="R1e-NL-WRF" id="Lvl-rH-EwI"/>
+                        <segue destination="qwU-xF-A6J" kind="presentation" id="IfA-CN-gp8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y3o-kI-tz0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="440.57971014492756" y="54.910714285714285"/>
+        </scene>
+        <!--SearchVC-->
+        <scene sceneID="UHy-Z0-Qmq">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="SearchVC" storyboardName="SearchVC" id="qwU-xF-A6J" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RAW-Af-DqU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1015" y="55"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="pinsoft" width="1584" height="372"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

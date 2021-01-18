@@ -1,0 +1,6 @@
+framework module Pods_timber_ios {
+  umbrella header "Pods-timber-ios-umbrella.h"
+
+  export *
+  module * { export * }
+}

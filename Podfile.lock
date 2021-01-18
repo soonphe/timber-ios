@@ -1,0 +1,39 @@
+PODS:
+  - Alamofire (5.4.1)
+  - Kingfisher (6.0.1)
+  - Moya (14.0.0):
+    - Moya/Core (= 14.0.0)
+  - Moya/Core (14.0.0):
+    - Alamofire (~> 5.0)
+  - ReachabilitySwift (5.0.0)
+  - ShimmerSwift (2.1.1)
+  - SVProgressHUD (2.2.5)
+
+DEPENDENCIES:
+  - Alamofire
+  - Kingfisher
+  - Moya
+  - ReachabilitySwift
+  - ShimmerSwift
+  - SVProgressHUD
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - Kingfisher
+    - Moya
+    - ReachabilitySwift
+    - ShimmerSwift
+    - SVProgressHUD
+
+SPEC CHECKSUMS:
+  Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
+  Kingfisher: adde87a4f74f6a3845395769354efff593581740
+  Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
+  ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
+  ShimmerSwift: f7ed2daf9c246de8299dfd9e12c6ab465cba9842
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+
+PODFILE CHECKSUM: c3a6d55be892600758a65fa958e4f65e328063a8
+
+COCOAPODS: 1.10.1
